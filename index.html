@@ -1,249 +1,265 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LazyWorkz Product Showcase</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <style>
-    body {
-      background-color: #f9f9f9;
-      font-family: 'Poppins', sans-serif;
-    }
-    .navbar {
-      background-color: #fff;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-    .navbar-brand {
-      font-weight: 700;
-      color: #ff6600;
-    }
-    .nav-link {
-      color: #333 !important;
-      font-weight: 500;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rosegold - Premium Tissue Products</title>
 
-    /* Animated Hero Section */
-    #home {
-      background: linear-gradient(-45deg, #ff6600, #ff9933, #ffcc66, #ff6600);
-      background-size: 400% 400%;
-      animation: gradientBG 8s ease infinite;
-      color: #fff;
-      height: 60vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-    }
-    @keyframes gradientBG {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 
-    .category-btn {
-      margin: 10px 8px;
-      border-radius: 25px;
-      padding: 8px 18px;
-      font-weight: 500;
-    }
-    .category-btn.active {
-      background-color: #ff6600;
-      color: #fff;
-    }
-    .card {
-      border: none;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      transition: 0.3s;
-    }
-    .card:hover {
-      transform: translateY(-5px);
-    }
-    .card img {
-      border-top-left-radius: 10px;
-      border-top-right-radius: 10px;
-      height: 200px;
-      object-fit: cover;
-    }
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-    /* Contact Section */
-    #contact {
-      background: #fff;
-    }
-    .contact-form {
-      max-width: 600px;
-      margin: auto;
-      background: #f8f9fa;
-      border-radius: 12px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-      padding: 30px;
-    }
-    .contact-form input,
-    .contact-form textarea {
-      border-radius: 8px;
-    }
-    .contact-form button {
-      background-color: #ff6600;
-      border: none;
-      font-weight: 500;
-    }
-    .contact-form button:hover {
-      background-color: #e65c00;
-    }
-  </style>
-</head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+  </head>
 <body>
 
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg">
-    <div class="container">
-      <a class="navbar-brand" href="#">LazyWorkz</a>
-      <div class="collapse navbar-collapse">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
-          <li class="nav-item"><a href="#products" class="nav-link">Products</a></li>
-          <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Hero Section -->
-  <section id="home">
-    <div class="container">
-      <h1 class="fw-bold display-5 mb-3">Discover Our Exclusive Collection</h1>
-      <p class="lead">Showcasing innovation, design, and quality — the LazyWorkz way.</p>
-    </div>
-  </section>
-
-  <!-- Categories -->
-  <section id="products" class="py-5">
-    <div class="container text-center">
-      <h2 class="fw-bold mb-4">Our Products</h2>
-      <div class="mb-4">
-        <button class="btn btn-outline-dark category-btn active" data-filter="all">All</button>
-        <button class="btn btn-outline-dark category-btn" data-filter="electronics">Electronics</button>
-        <button class="btn btn-outline-dark category-btn" data-filter="furniture">Furniture</button>
-        <button class="btn btn-outline-dark category-btn" data-filter="accessories">Accessories</button>
-      </div>
-
-      <div class="row g-4" id="product-list">
-        <!-- Electronics -->
-        <div class="col-md-4 product-card" data-category="electronics">
-          <div class="card" data-bs-toggle="modal" data-bs-target="#productModal" data-title="Smartphone X1" data-desc="A stunning 6.7-inch AMOLED display, 108MP camera, and lightning-fast performance." data-img="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9">
-            <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9" alt="">
-            <div class="card-body">
-              <h5 class="card-title">Smartphone X1</h5>
-              <p class="card-text text-muted">108MP camera | 6.7-inch display</p>
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#home">rosegold</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#products">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
             </div>
-          </div>
         </div>
+    </nav>
 
-        <div class="col-md-4 product-card" data-category="electronics">
-          <div class="card" data-bs-toggle="modal" data-bs-target="#productModal" data-title="Wireless Headphones" data-desc="Experience crisp sound, deep bass, and 40-hour battery life with our wireless headphones." data-img="https://images.unsplash.com/photo-1580894908361-967195033215">
-            <img src="https://images.unsplash.com/photo-1580894908361-967195033215" alt="">
-            <div class="card-body">
-              <h5 class="card-title">Wireless Headphones</h5>
-              <p class="card-text text-muted">Noise cancellation | 40hr battery</p>
+    <header id="home">
+        <div class="container">
+            <div data-aos="fade-in" data-aos-duration="1500">
+                <h1 class="logo">rosegold</h1>
+                <p class="tagline">Elegance & Purity in Every Sheet</p>
             </div>
-          </div>
         </div>
+    </header>
 
-        <!-- Furniture -->
-        <div class="col-md-4 product-card" data-category="furniture">
-          <div class="card" data-bs-toggle="modal" data-bs-target="#productModal" data-title="Luxury Sofa" data-desc="Soft, stylish, and built for comfort — our luxury sofa enhances every living space." data-img="https://images.unsplash.com/photo-1600585154340-be6161a56a0c">
-            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" alt="">
-            <div class="card-body">
-              <h5 class="card-title">Luxury Sofa</h5>
-              <p class="card-text text-muted">Comfort | Premium finish</p>
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">About Us</h2>
+            <p class="lead text-center mx-auto" style="max-width: 800px;" data-aos="fade-up" data-aos-delay="100">
+                At rosegold, we believe in combining everyday convenience with a touch of luxury. Our premium range of tissue products is crafted with care from the finest, sustainably sourced materials to ensure superior softness and strength. We are dedicated to quality, hygiene, and elegance for your home and family.
+            </p>
+        </div>
+    </section>
+
+    <section id="categories" class="overflow-hidden">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Shop by Category</h2>
+            <div class="row g-4">
+                <div class="col-lg-2 col-md-4 col-6" data-aos="fade-up" data-aos-delay="100">
+                    <a href="#products" class="category-card">
+                        <i class="bi bi-box-seam icon"></i>
+                        <h4>Facial Tissues</h4>
+                    </a>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6" data-aos="fade-up" data-aos-delay="200">
+                    <a href="#products" class="category-card">
+                        <i class="bi bi-layers icon"></i>
+                        <h4>Paper Napkins</h4>
+                    </a>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6" data-aos="fade-up" data-aos-delay="300">
+                    <a href="#products" class="category-card">
+                        <i class="bi bi-rulers icon"></i>
+                        <h4>Kitchen Towels</h4>
+                    </a>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6" data-aos="fade-up" data-aos-delay="400">
+                    <a href="#products" class="category-card">
+                        <i class="bi bi-view-stacked icon"></i>
+                        <h4>Toilet Rolls</h4>
+                    </a>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6" data-aos="fade-up" data-aos-delay="500">
+                    <a href="#products" class="category-card">
+                        <i class="bi bi-droplet icon"></i>
+                        <h4>Wet Wipes</h4>
+                    </a>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6" data-aos="fade-up" data-aos-delay="600">
+                    <a href="#products" class="category-card">
+                        <i class="bi bi-handbag icon"></i>
+                        <h4>Pocket Tissues</h4>
+                    </a>
+                </div>
             </div>
-          </div>
         </div>
+    </section>
 
-        <!-- Accessories -->
-        <div class="col-md-4 product-card" data-category="accessories">
-          <div class="card" data-bs-toggle="modal" data-bs-target="#productModal" data-title="Smart Watch" data-desc="Track fitness, monitor heart rate, and stay connected in style." data-img="https://images.unsplash.com/photo-1503387762-592deb58ef4e">
-            <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e" alt="">
-            <div class="card-body">
-              <h5 class="card-title">Smart Watch</h5>
-              <p class="card-text text-muted">Health tracking | Notifications</p>
+    <section id="products">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Our Featured Products</h2>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card product-card">
+                        <img src="61K+D2LpBTL._SL1500_.jpg" class="card-img-top" alt="Facial Tissues">
+                        <div class="card-body p-4">
+                            <h3 class="card-title">Luxury Facial Tissues</h3>
+                            <p class="card-text">Ultra-soft and gentle on the skin, perfect for everyday use. Available in elegant cube and flat boxes.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card product-card">
+                        <img src="71N6vUxl8-L._SX569_.jpg" class="card-img-top" alt="Paper Napkins">
+                        <div class="card-body p-4">
+                            <h3 class="card-title">Plush Paper Napkins</h3>
+                            <p class="card-text">Thick, absorbent, and stylish napkins ideal for dining, parties, and special occasions.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card product-card">
+                        <img src="71ZSoDzW2QL._SL1080_.jpg" class="card-img-top" alt="Kitchen Towels">
+                        <div class="card-body p-4">
+                            <h3 class="card-title">Absorbent Kitchen Towels</h3>
+                            <p class="card-text">Our strong and highly absorbent kitchen rolls make cleaning up spills and messes effortless.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card product-card">
+                        <img src="https://placehold.co/600x400/f8d7da/333333?text=Toilet+Rolls" class="card-img-top" alt="Toilet Rolls">
+                        <div class="card-body p-4">
+                            <h3 class="card-title">Soft Toilet Rolls</h3>
+                            <p class="card-text">Experience ultimate comfort and quality with our premium, soft-touch toilet tissue rolls.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card product-card">
+                        <img src="https://placehold.co/600x400/f8d7da/333333?text=Wet+Wipes" class="card-img-top" alt="Wet Wipes">
+                        <div class="card-body p-4">
+                            <h3 class="card-title">Gentle Wet Wipes</h3>
+                            <p class="card-text">Infused with a gentle cleansing formula, our wet wipes are perfect for a quick refresh on the go.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card product-card">
+                        <img src="https://placehold.co/600x400/f8d7da/333333?text=Pocket+Tissues" class="card-img-top" alt="Pocket Tissues">
+                        <div class="card-body p-4">
+                            <h3 class="card-title">Handy Pocket Tissues</h3>
+                            <p class="card-text">Soft, strong, and conveniently packed to fit in your pocket, purse, or car.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Modal -->
-  <div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <img id="modalImg" src="" class="img-fluid rounded-top" alt="">
-        <div class="modal-body">
-          <h5 id="modalTitle" class="fw-bold"></h5>
-          <p id="modalDesc" class="text-muted"></p>
-          <a href="#contact" class="btn btn-primary">Get Quote</a>
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Contact Us</h2>
+            <p class="lead text-center mx-auto" style="max-width: 800px;" data-aos="fade-up" data-aos-delay="100">
+                For bulk orders, partnerships, or any inquiries, please fill out the form below and we will get back to you shortly.
+            </p>
+            <div class="row justify-content-center mt-5">
+                <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+                    <form>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <input type="text" class="form-control" placeholder="Your Name" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <input type="email" class="form-control" placeholder="Your Email" required>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Subject">
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control" rows="5" placeholder="Your Message" required></textarea>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary">Send Message</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </div>
+    </section>
 
-  <!-- Contact -->
-  <section id="contact" class="py-5">
-    <div class="container text-center">
-      <h2 class="fw-bold mb-4">Contact Us</h2>
-      <div class="contact-form text-start">
-        <form>
-          <div class="mb-3">
-            <label class="form-label">Full Name</label>
-            <input type="text" class="form-control" placeholder="Enter your name">
-          </div>
-          <div class="mb-3">
-            <label class="form-label">Email</label>
-            <input type="email" class="form-control" placeholder="Enter your email">
-          </div>
-          <div class="mb-3">
-            <label class="form-label">Message</label>
-            <textarea class="form-control" rows="4" placeholder="Write your message here..."></textarea>
-          </div>
-          <div class="text-center">
-            <button type="submit" class="btn btn-primary px-4">Send Message</button>
-          </div>
-        </form>
-      </div>
-    </div>
-  </section>
+    <footer class="pt-5 pb-4">
+        <div class="container text-center text-md-start">
+            <div class="row">
+                <div class="col-md-4 col-lg-4 mx-auto mt-3">
+                    <h5 class="footer-brand">rosegold</h5>
+                    <p>Providing premium, elegant, and sustainable tissue products for a touch of everyday luxury.</p>
+                </div>
 
-  <footer class="py-3 text-center bg-white border-top">
-    <p class="mb-0 text-muted">&copy; 2025 LazyWorkz | All rights reserved.</p>
-  </footer>
+                <div class="col-md-2 col-lg-2 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 fw-bold">Products</h5>
+                    <p><a href="#products">Facial Tissues</a></p>
+                    <p><a href="#products">Kitchen Towels</a></p>
+                    <p><a href="#products">Napkins</a></p>
+                    <p><a href="#products">Wet Wipes</a></p>
+                </div>
+                
+                <div class="col-md-2 col-lg-2 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 fw-bold">Quick Links</h5>
+                    <p><a href="#home">Home</a></p>
+                    <p><a href="#about">About Us</a></p>
+                    <p><a href="#products">Our Products</a></p>
+                    <p><a href="#contact">Contact</a></p>
+                </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-    // Category Filter
-    const buttons = document.querySelectorAll('.category-btn');
-    const cards = document.querySelectorAll('.product-card');
+                <div class="col-md-4 col-lg-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 fw-bold">Contact</h5>
+                    <p><i class="bi bi-geo-alt-fill me-3"></i>New Delhi, India</p>
+                    <p><i class="bi bi-envelope-fill me-3"></i>contact@rosegold.com</p>
+                    <p><i class="bi bi-telephone-fill me-3"></i>+91 123 456 7890</p>
+                </div>
+            </div>
 
-    buttons.forEach(btn => {
-      btn.addEventListener('click', () => {
-        buttons.forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        const filter = btn.getAttribute('data-filter');
-        cards.forEach(card => {
-          card.style.display = (filter === 'all' || card.getAttribute('data-category') === filter) ? 'block' : 'none';
+            <hr class="my-4">
+
+            <div class="row align-items-center">
+                <div class="col-md-7 col-lg-8">
+                    <p>&copy; 2025 rosegold. All Rights Reserved.</p>
+                </div>
+                <div class="col-md-5 col-lg-4">
+                    <div class="text-center text-md-end social-icons">
+                       <a href="#" class="text-white"><i class="bi bi-facebook"></i></a>
+                       <a href="#" class="text-white"><i class="bi bi-instagram"></i></a>
+                       <a href="#" class="text-white"><i class="bi bi-twitter-x"></i></a>
+                       <a href="#" class="text-white"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
         });
-      });
-    });
+    </script>
 
-    // Modal
-    const modal = document.getElementById('productModal');
-    modal.addEventListener('show.bs.modal', event => {
-      const card = event.relatedTarget;
-      document.getElementById('modalTitle').textContent = card.getAttribute('data-title');
-      document.getElementById('modalDesc').textContent = card.getAttribute('data-desc');
-      document.getElementById('modalImg').src = card.getAttribute('data-img');
-    });
-  </script>
 </body>
 </html>
