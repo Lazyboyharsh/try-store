@@ -1,15 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>rosegold - Premium Tissue Products</title>
 
-    <meta name="description"
-        content="Discover rosegold's premium range of eco-friendly and luxuriously soft tissue products. From facial tissues to kitchen towels, experience elegance in every sheet.">
-    <meta name="keywords"
-        content="rosegold, tissue, paper, napkins, facial tissues, kitchen towels, toilet rolls, wet wipes, pocket tissues, premium, luxury, eco-friendly, soft, absorbent">
+    <meta name="description" content="Discover rosegold's premium range of eco-friendly and luxuriously soft tissue products. From facial tissues to kitchen towels, experience elegance in every sheet.">
+    <meta name="keywords" content="rosegold, tissue, paper, napkins, facial tissues, kitchen towels, toilet rolls, wet wipes, pocket tissues, premium, luxury, eco-friendly, soft, absorbent">
 
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 
@@ -19,46 +16,23 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
 
     <style>
         :root {
-            --primary-color: #c94b4b;
-            /* Rose Red */
-            --secondary-color: #4b134f;
-            /* Deep Plum */
-            --tertiary-color: #fce4ec;
-            /* Light Pink */
-            --background-color: #fff8f7;
-            /* Off-White Background */
-            --text-color: #444;
-            /* Dark Grey Text */
+            --primary-color: #c94b4b; /* Rose Red */
+            --secondary-color: #4b134f; /* Deep Plum */
+            --tertiary-color: #fce4ec; /* Light Pink */
+            --background-color: #fff8f7; /* Off-White Background */
+            --text-color: #444; /* Dark Grey Text */
             --heading-font: 'Playfair Display', serif;
             --body-font: 'Roboto', sans-serif;
         }
 
         /* Base Styles */
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: var(--body-font);
-            background-color: var(--background-color);
-            color: var(--text-color);
-            overflow-x: hidden;
-        }
-
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6 {
-            font-family: var(--heading-font);
-        }
+        html { scroll-behavior: smooth; }
+        body { font-family: var(--body-font); background-color: var(--background-color); color: var(--text-color); overflow-x: hidden; }
+        h1, h2, h3, h4, h5, h6 { font-family: var(--heading-font); }
 
         /* Navbar */
         .navbar {
@@ -66,452 +40,182 @@
             background-color: transparent;
             transition: padding 0.3s ease-in-out, background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
         }
-
         .navbar.navbar-scrolled {
             padding: 0.75rem 0;
             background-color: rgba(255, 255, 255, 0.98);
             backdrop-filter: blur(10px);
-            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
         }
-
         .navbar-brand img {
             height: 60px;
             width: auto;
             transition: height 0.3s ease-in-out;
         }
-
-        .navbar.navbar-scrolled .navbar-brand img {
-            height: 50px;
-        }
-
-        .navbar-toggler {
-            border: none;
-            font-size: 1.75rem;
-            color: var(--secondary-color);
-        }
-
-        .navbar-toggler:focus {
-            box-shadow: none;
-        }
-
+        .navbar.navbar-scrolled .navbar-brand img { height: 50px; }
+        .navbar-toggler { border: none; font-size: 1.75rem; color: var(--secondary-color); }
+        .navbar-toggler:focus { box-shadow: none; }
         .nav-link {
-            color: var(--text-color) !important;
-            font-weight: 400;
-            margin: 0 15px;
-            transition: color 0.3s;
-            position: relative;
+            color: var(--text-color) !important; font-weight: 400; margin: 0 15px;
+            transition: color 0.3s; position: relative;
         }
-
-        .navbar-scrolled .nav-link {
-            color: var(--text-color) !important;
-        }
-
-        .navbar:not(.navbar-scrolled) .nav-link {
-            color: #fff !important;
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-        }
-
+        .navbar-scrolled .nav-link { color: var(--text-color) !important; }
+        .navbar:not(.navbar-scrolled) .nav-link { color: #fff !important; text-shadow: 1px 1px 3px rgba(0,0,0,0.5); }
         .nav-link::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 100%;
-            height: 2px;
-            background-color: var(--primary-color);
-            transform: scaleX(0);
-            transition: transform 0.3s ease-out;
+            content: ''; position: absolute; bottom: -5px; left: 0; width: 100%; height: 2px;
+            background-color: var(--primary-color); transform: scaleX(0); transition: transform 0.3s ease-out;
         }
-
-        .nav-link:hover,
-        .nav-link.active {
-            color: var(--primary-color) !important;
-        }
-
-        .nav-link:hover::after,
-        .nav-link.active::after {
-            transform: scaleX(1);
-        }
-
+        .nav-link:hover, .nav-link.active { color: var(--primary-color) !important; }
+        .nav-link:hover::after, .nav-link.active::after { transform: scaleX(1); }
         .btn-quote {
-            background-color: var(--primary-color);
-            color: #fff;
-            border: 2px solid var(--primary-color);
-            padding: 8px 25px;
-            font-weight: 700;
-            border-radius: 50px;
-            transition: all 0.3s ease;
+            background-color: var(--primary-color); color: #fff; border: 2px solid var(--primary-color);
+            padding: 8px 25px; font-weight: 700; border-radius: 50px; transition: all 0.3s ease;
         }
-
-        .btn-quote:hover {
-            background-color: transparent;
-            color: var(--primary-color);
-        }
-
-        .navbar:not(.navbar-scrolled) .btn-quote:hover {
-            background-color: #fff;
-            border-color: #fff;
-        }
+        .btn-quote:hover { background-color: transparent; color: var(--primary-color); }
+        .navbar:not(.navbar-scrolled) .btn-quote:hover { background-color: #fff; border-color: #fff; }
 
         /* Header Section */
         #home {
             background-image: linear-gradient(to bottom, rgba(75, 19, 79, 0.6), rgba(201, 75, 75, 0.6)), url('hero-bg.jpg');
-            background-size: cover;
-            background-position: center;
-            color: #ffffff;
-            padding: 12rem 0 10rem;
-            text-align: center;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            background-size: cover; background-position: center; color: #ffffff;
+            padding: 12rem 0 10rem; text-align: center;
+            min-height: 100vh; display: flex; align-items: center; justify-content: center;
         }
-
-        #home h1 {
-            font-size: 5rem;
-            font-weight: 700;
-            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
-        }
-
-        #home p {
-            font-size: 1.8rem;
-            font-weight: 300;
-            margin-bottom: 3rem;
-        }
-
+        #home h1 { font-size: 5rem; font-weight: 700; text-shadow: 2px 2px 8px rgba(0,0,0,0.5); }
+        #home p { font-size: 1.8rem; font-weight: 300; margin-bottom: 3rem; }
         .btn-hero {
-            background-color: #fff;
-            color: var(--primary-color);
-            border: 2px solid #fff;
-            padding: 15px 40px;
-            font-size: 1.25rem;
-            font-weight: 700;
-            border-radius: 50px;
-            transition: all 0.3s ease;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            background-color: #fff; color: var(--primary-color); border: 2px solid #fff;
+            padding: 15px 40px; font-size: 1.25rem; font-weight: 700; border-radius: 50px;
+            transition: all 0.3s ease; box-shadow: 0 5px 15px rgba(0,0,0,0.2);
         }
-
-        .btn-hero:hover {
-            background-color: var(--primary-color);
-            color: #fff;
-            border-color: var(--primary-color);
-            transform: scale(1.05);
-        }
+        .btn-hero:hover { background-color: var(--primary-color); color: #fff; border-color: var(--primary-color); transform: scale(1.05); }
 
         /* General Section Styling */
-        section {
-            padding: 100px 0;
-        }
-
+        section { padding: 100px 0; }
         .section-title {
-            font-size: 3.5rem;
-            font-weight: 700;
-            margin-bottom: 60px;
-            text-align: center;
-            color: var(--secondary-color);
-            position: relative;
-            padding-bottom: 15px;
+            font-size: 3.5rem; font-weight: 700; margin-bottom: 60px; text-align: center;
+            color: var(--secondary-color); position: relative; padding-bottom: 15px;
         }
-
         .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 4px;
-            background-color: var(--primary-color);
-            border-radius: 2px;
+            content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);
+            width: 80px; height: 4px; background-color: var(--primary-color); border-radius: 2px;
         }
 
         /* --- SUB-SECTIONS (Promise, Category, Products, etc.) --- */
-        #our-promise {
-            background-color: #ffffff;
-        }
-
+        #our-promise { background-color: #ffffff; }
         .promise-card {
-            background: #fff;
-            border-radius: 15px;
-            padding: 30px;
-            text-align: center;
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
-            transition: all 0.3s ease;
-            height: 100%;
+            background: #fff; border-radius: 15px; padding: 30px; text-align: center;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.08); transition: all 0.3s ease; height: 100%;
         }
+        .promise-card:hover { transform: translateY(-10px) scale(1.02); box-shadow: 0 12px 40px rgba(0,0,0,0.12); }
+        .promise-card .icon { font-size: 3.5rem; color: var(--primary-color); margin-bottom: 20px; }
+        .promise-card h4 { font-size: 1.5rem; font-weight: 700; color: var(--secondary-color); margin-bottom: 15px; }
 
-        .promise-card:hover {
-            transform: translateY(-10px) scale(1.02);
-            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
-        }
-
-        .promise-card .icon {
-            font-size: 3.5rem;
-            color: var(--primary-color);
-            margin-bottom: 20px;
-        }
-
-        .promise-card h4 {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--secondary-color);
-            margin-bottom: 15px;
-        }
-
-        #categories {}
-
+        #categories { background-color: var(--background-color); }
         .category-card {
-            padding: 60px;
-            text-align: center;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            color: var(--text-color);
-            height: 100%;
+            background: #ffffff; border-radius: 15px; padding: 30px; text-align: center;
+            box-shadow: 0 4px 25px rgba(0,0,0,0.05); transition: all 0.3s ease; text-decoration: none;
+            color: var(--text-color); height: 100%;
         }
+        .category-card:hover { transform: translateY(-10px) scale(1.03); color: var(--primary-color); box-shadow: 0 8px 35px rgba(0,0,0,0.1); }
+        .category-card .icon { font-size: 3rem; color: var(--primary-color); margin-bottom: 15px; }
+        .category-card h4 { font-family: var(--body-font); font-size: 1.1rem; font-weight: 700; }
 
-        .category-card:hover {
-            transform: translateY(-10px) scale(1.03);
-            color: var(--primary-color);
-        }
-
-        .category-card .icon {
-            font-size: 3rem;
-            color: var(--primary-color);
-            margin-bottom: 15px;
-        }
-
-        .category-card h4 {
-            font-family: var(--body-font);
-            font-size: 1.1rem;
-            font-weight: 700;
-        }
-
-        #products {
-            background-color: var(--tertiary-color);
-        }
-
+        #products { background-color: var(--tertiary-color); }
         .product-card {
-            border: none;
-            border-radius: 15px;
-            box-shadow: 0 4px 25px rgba(0, 0, 0, 0.08);
-            transition: all 0.3s ease;
-            height: 100%;
-            background-color: #fff;
+            border: none; border-radius: 15px; box-shadow: 0 4px 25px rgba(0,0,0,0.08);
+            transition: all 0.3s ease; height: 100%; background-color: #fff;
         }
-
-        .product-card:hover {
-            transform: translateY(-10px) scale(1.01);
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
-        }
-
-        .card-img-top {
-            border-top-left-radius: 15px;
-            border-top-right-radius: 15px;
-            height: 250px;
-            object-fit: cover;
-        }
-
-        .card-title {
-            color: var(--primary-color);
-            font-weight: 700;
-            font-size: 1.6rem;
-        }
+        .product-card:hover { transform: translateY(-10px) scale(1.01); box-shadow: 0 10px 40px rgba(0,0,0,0.15); }
+        .card-img-top { border-top-left-radius: 15px; border-top-right-radius: 15px; height: 250px; object-fit: cover; }
+        .card-title { color: var(--primary-color); font-weight: 700; font-size: 1.6rem; }
 
         /* Contact Form */
-        #contact {
-            background-color: var(--background-color);
-        }
-
+        #contact { background-color: var(--background-color); }
         .btn-primary {
-            background-color: var(--primary-color);
-            border-color: var(--primary-color);
-            padding: 14px 35px;
-            font-weight: 700;
-            border-radius: 50px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            background-color: var(--primary-color); border-color: var(--primary-color); padding: 14px 35px;
+            font-weight: 700; border-radius: 50px; transition: all 0.3s ease; box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         }
-
-        .btn-primary:hover {
-            background-color: var(--secondary-color);
-            border-color: var(--secondary-color);
-            transform: translateY(-3px);
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-        }
+        .btn-primary:hover { background-color: var(--secondary-color); border-color: var(--secondary-color); transform: translateY(-3px); box-shadow: 0 6px 15px rgba(0,0,0,0.2); }
 
         /* Footer */
-        footer {
-            background-color: var(--secondary-color);
-            color: #f1f1f1;
-            padding: 60px 0 30px;
-        }
-
-        footer .footer-brand img {
-            height: 60px;
-            width: auto;
-            margin-bottom: 15px;
-        }
+        footer { background-color: var(--secondary-color); color: #f1f1f1; padding: 60px 0 30px; }
+        footer .footer-brand img { height: 60px; width: auto; margin-bottom: 15px; }
+        footer a { color: #ccc; text-decoration: none; transition: color 0.3s ease; }
+        footer a:hover { color: #fff; }
 
         /* Scroll to Top Button */
         #backToTopBtn {
-            display: none;
-            position: fixed;
-            bottom: 25px;
-            right: 25px;
-            z-index: 9999;
-            /* High z-index */
-            border: none;
-            background-color: var(--primary-color);
-            color: white;
-            cursor: pointer;
-            border-radius: 50%;
-            width: 55px;
-            height: 55px;
-            font-size: 1.8rem;
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
-            transition: all 0.4s ease;
-            opacity: 0;
+            display: none; position: fixed; bottom: 25px; right: 25px; z-index: 9999;
+            border: none; background-color: var(--primary-color); color: white; cursor: pointer;
+            border-radius: 50%; width: 55px; height: 55px; font-size: 1.8rem;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.25); transition: all 0.4s ease; opacity: 0;
         }
-
-        #backToTopBtn.show {
-            display: flex;
-            opacity: 1;
-        }
-
-        #backToTopBtn:hover {
-            background-color: var(--secondary-color);
-            transform: translateY(-3px);
-        }
-
+        #backToTopBtn.show { display: flex; opacity: 1; }
+        #backToTopBtn:hover { background-color: var(--secondary-color); transform: translateY(-3px); }
 
         /* --- RESPONSIVENESS FIXES --- */
-
-        /* Medium devices (tablets, less than 992px) */
         @media (max-width: 991.98px) {
-
-            /* Make navbar solid on mobile immediately for better readability */
-            .navbar,
-            .navbar.navbar-scrolled {
-                background-color: #fff;
-                padding: 0.75rem 0;
-            }
-
-            .navbar-brand img {
-                height: 50px !important;
-            }
-
-            .navbar .nav-link {
-                color: var(--text-color) !important;
-                text-shadow: none;
-            }
-
-            .navbar-collapse {
-                background-color: #fff;
-                padding: 15px;
-                border-radius: 10px;
-                margin-top: 10px;
-                box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-                text-align: center;
-            }
-
-            .nav-link {
-                margin: 10px 0;
-            }
-
-            #home {
-                min-height: auto;
-                /* Remove full screen height */
-                padding: 10rem 0 8rem;
-            }
-
-            #home h1 {
-                font-size: 3.5rem;
-            }
-
-            #home p {
-                font-size: 1.2rem;
-            }
+            .navbar, .navbar.navbar-scrolled { background-color: #fff; padding: 0.75rem 0; }
+            .navbar-brand img { height: 50px !important; }
+            .navbar .nav-link { color: var(--text-color) !important; text-shadow: none; }
+            .navbar-collapse { background-color: #fff; padding: 15px; border-radius: 10px; margin-top: 10px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); text-align: center; }
+            .nav-link { margin: 10px 0; }
+            #home { min-height: auto; padding: 10rem 0 8rem; }
+            #home h1 { font-size: 3.5rem; }
+            #home p { font-size: 1.2rem; }
         }
-
-        /* Small devices (landscape phones, less than 768px) */
         @media (max-width: 767.98px) {
-            section {
-                padding: 60px 0;
-            }
-
-            /* Reduce section spacing */
-            .section-title {
-                font-size: 2.5rem;
-                margin-bottom: 40px;
-            }
-
-            #home {
-                padding: 9rem 0 7rem;
-            }
-
-            #home h1 {
-                font-size: 2.8rem;
-            }
-
-            #home p {
-                font-size: 1.1rem;
-            }
-
-            .btn-hero {
-                padding: 12px 30px;
-                font-size: 1rem;
-            }
-
-            .promise-card {
-                padding: 20px;
-            }
-
-            .promise-card h4 {
-                font-size: 1.3rem;
-            }
-
-            .category-card h4 {
-                font-size: 1rem;
-            }
-
-            .card-title {
-                font-size: 1.4rem;
-            }
-
-            .card-text {
-                font-size: 0.95rem;
-            }
+            section { padding: 60px 0; }
+            .section-title { font-size: 2.5rem; margin-bottom: 40px; }
+            #home { padding: 9rem 0 7rem; }
+            #home h1 { font-size: 2.8rem; }
+            #home p { font-size: 1.1rem; }
+            .btn-hero { padding: 12px 30px; font-size: 1rem; }
+            .promise-card { padding: 20px; }
+            .promise-card h4 { font-size: 1.3rem; }
+            .category-card { padding: 20px; }
+            .category-card h4 { font-size: 1rem; }
+            .card-title { font-size: 1.4rem; }
+            .card-text { font-size: 0.95rem; }
         }
     </style>
 </head>
-
 <body>
 
-    <nav class="navbar navbar-expand-lg fixed-top" id="mainNavbar">
-        <div class="container">
-            <a class="navbar-brand" href="#home"><img src="rosegold-logo.jpg" alt="RoseGold Logo"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"><i
-                    class="bi bi-list"></i></button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav mx-auto">
-                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#our-promise">Our Promise</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#categories">Categories</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#products">Products</a></li>
-                </ul>
-                <a href="#contact" class="btn btn-quote d-none d-lg-block">Get a Quote</a>
-            </div>
+   <nav class="navbar navbar-expand-lg fixed-top" id="mainNavbar">
+    <div class="container">
+        <a class="navbar-brand" href="index.html"><img src="rosegold-logo.jpg" alt="RoseGold Logo"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"><i class="bi bi-list"></i></button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Products
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="facial-tissues.html">Facial Tissues</a></li>
+                        <li><a class="dropdown-item" href="paper-napkins.html">Paper Napkins</a></li>
+                        <li><a class="dropdown-item" href="kitchen-towels.html">Kitchen Towels</a></li>
+                        <li><a class="dropdown-item" href="toilet-rolls.html">Toilet Rolls</a></li>
+                        <li><a class="dropdown-item" href="wet-wipes.html">Wet Wipes</a></li>
+                        <li><a class="dropdown-item" href="pocket-tissues.html">Pocket Tissues</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            </ul>
+            <a href="#contact" class="btn btn-quote d-none d-lg-block">Get a Quote</a>
         </div>
-    </nav>
+    </div>
+</nav>
 
     <header id="home">
         <div class="container">
-            <h1 data-aos="zoom-in" data-aos-duration="1000">Rosegold</h1>
+            <h1 data-aos="zoom-in" data-aos-duration="1000">rosegold</h1>
             <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">Elegance & Purity in Every Sheet</p>
-            <a href="#products" class="btn btn-hero" data-aos="zoom-in" data-aos-duration="1000"
-                data-aos-delay="600">Explore Now</a>
+            <a href="#products" class="btn btn-hero" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="600">Shop Now</a>
         </div>
     </header>
 
@@ -520,10 +224,7 @@
             <div class="container">
                 <h2 class="section-title" data-aos="fade-up">About Us</h2>
                 <p class="lead text-center mx-auto" style="max-width: 800px;" data-aos="fade-up" data-aos-delay="100">
-                    At rosegold, we believe in combining everyday convenience with a touch of luxury. Our premium range
-                    of tissue products is crafted with care from the finest, sustainably sourced materials to ensure
-                    superior softness and strength. We are dedicated to quality, hygiene, and elegance for your home and
-                    family.
+                    At rosegold, we believe in combining everyday convenience with a touch of luxury. Our premium range of tissue products is crafted with care from the finest, sustainably sourced materials to ensure superior softness and strength. We are dedicated to quality, hygiene, and elegance for your home and family.
                 </p>
             </div>
         </section>
@@ -532,16 +233,13 @@
             <div class="container">
                 <h2 class="section-title" data-aos="fade-up">Our Promise</h2>
                 <div class="row g-4 justify-content-center">
-
                     <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
                         <div class="promise-card">
                             <i class="bi bi-tree icon"></i>
                             <h4>Eco-Friendly</h4>
-                            <p>Committed to sustainability, our products are made from responsibly sourced materials.
-                            </p>
+                            <p>Committed to sustainability, our products are made from responsibly sourced materials.</p>
                         </div>
                     </div>
-
                     <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
                         <div class="promise-card">
                             <i class="bi bi-feather icon"></i>
@@ -549,7 +247,6 @@
                             <p>Experience unparalleled comfort with our ultra-soft and gentle tissue products.</p>
                         </div>
                     </div>
-
                     <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
                         <div class="promise-card">
                             <i class="bi bi-shield-check icon"></i>
@@ -557,7 +254,6 @@
                             <p>Manufactured under strict quality controls for your family's health and safety.</p>
                         </div>
                     </div>
-
                     <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
                         <div class="promise-card">
                             <i class="bi bi-gem icon"></i>
@@ -565,62 +261,64 @@
                             <p>Designed for strength and durability, our tissues stand up to everyday demands.</p>
                         </div>
                     </div>
-
                 </div>
             </div>
         </section>
 
-        <section id="categories" class="overflow-hidden">
-            <div class="container">
-                <h2 class="section-title" data-aos="fade-up">Shop by Category</h2>
-                <div class="row g-4">
-                    <div class="col-lg-2 col-md-4 col-6" data-aos="fade-up" data-aos-delay="100"><a href="#categories"
-                            class="category-card"><i class="bi bi-box-seam icon"></i>
-                            <h4>Facial Tissues</h4>
-                        </a></div>
-                    <div class="col-lg-2 col-md-4 col-6" data-aos="fade-up" data-aos-delay="200"><a href="#categories"
-                            class="category-card"><i class="bi bi-layers icon"></i>
-                            <h4>Paper Napkins</h4>
-                        </a></div>
-                    <div class="col-lg-2 col-md-4 col-6" data-aos="fade-up" data-aos-delay="300"><a href="#categories"
-                            class="category-card"><i class="bi bi-rulers icon"></i>
-                            <h4>Kitchen Towels</h4>
-                        </a></div>
-                    <div class="col-lg-2 col-md-4 col-6" data-aos="fade-up" data-aos-delay="400"><a href="#categories"
-                            class="category-card"><i class="bi bi-view-stacked icon"></i>
-                            <h4>Toilet Rolls</h4>
-                        </a></div>
-                    <div class="col-lg-2 col-md-4 col-6" data-aos="fade-up" data-aos-delay="500"><a href="#categories"
-                            class="category-card"><i class="bi bi-droplet icon"></i>
-                            <h4>Wet Wipes</h4>
-                        </a></div>
-                    <div class="col-lg-2 col-md-4 col-6" data-aos="fade-up" data-aos-delay="600"><a href="#categories"
-                            class="category-card"><i class="bi bi-handbag icon"></i>
-                            <h4>Pocket Tissues</h4>
-                        </a></div>
-                </div>
+     <section id="categories" class="overflow-hidden">
+    <div class="container">
+        <h2 class="section-title" data-aos="fade-up">Shop by Category</h2>
+        <div class="row g-4">
+            <div class="col-lg-2 col-md-4 col-6" data-aos="fade-up" data-aos-delay="100">
+                <a href="facial-tissues.html" class="category-card">
+                    <i class="bi bi-box-seam icon"></i><h4>Facial Tissues</h4>
+                </a>
             </div>
-        </section>
+            <div class="col-lg-2 col-md-4 col-6" data-aos="fade-up" data-aos-delay="200">
+                <a href="paper-napkins.html" class="category-card">
+                    <i class="bi bi-layers icon"></i><h4>Paper Napkins</h4>
+                </a>
+            </div>
+            <div class="col-lg-2 col-md-4 col-6" data-aos="fade-up" data-aos-delay="300">
+                <a href="kitchen-towels.html" class="category-card">
+                    <i class="bi bi-rulers icon"></i><h4>Kitchen Towels</h4>
+                </a>
+            </div>
+            <div class="col-lg-2 col-md-4 col-6" data-aos="fade-up" data-aos-delay="400">
+                <a href="toilet-rolls.html" class="category-card">
+                    <i class="bi bi-view-stacked icon"></i><h4>Toilet Rolls</h4>
+                </a>
+            </div>
+            <div class="col-lg-2 col-md-4 col-6" data-aos="fade-up" data-aos-delay="500">
+                <a href="wet-wipes.html" class="category-card">
+                    <i class="bi bi-droplet icon"></i><h4>Wet Wipes</h4>
+                </a>
+            </div>
+            <div class="col-lg-2 col-md-4 col-6" data-aos="fade-up" data-aos-delay="600">
+                <a href="pocket-tissues.html" class="category-card">
+                    <i class="bi bi-handbag icon"></i><h4>Pocket Tissues</h4>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
 
         <section id="products">
             <div class="container">
                 <h2 class="section-title" data-aos="fade-up">Our Featured Products</h2>
                 <div class="row g-4">
                     <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-                        <div class="card product-card"><img
-                                src="https://placehold.co/600x400/f8d7da/333333?text=Facial+Tissues"
-                                class="card-img-top" alt="RoseGold Luxury Facial Tissues">
+                        <div class="card product-card">
+                            <img src="https://placehold.co/600x400/f8d7da/333333?text=Facial+Tissues" class="card-img-top" alt="RoseGold Luxury Facial Tissues">
                             <div class="card-body p-4">
                                 <h3 class="card-title">Luxury Facial Tissues</h3>
-                                <p class="card-text">Ultra-soft and gentle, perfect for everyday use. Complements any
-                                    decor.</p>
+                                <p class="card-text">Ultra-soft and gentle, perfect for everyday use. Complements any decor.</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-                        <div class="card product-card"><img
-                                src="https://placehold.co/600x400/f8d7da/333333?text=Paper+Napkins" class="card-img-top"
-                                alt="RoseGold Plush Paper Napkins">
+                        <div class="card product-card">
+                            <img src="https://placehold.co/600x400/f8d7da/333333?text=Paper+Napkins" class="card-img-top" alt="RoseGold Plush Paper Napkins">
                             <div class="card-body p-4">
                                 <h3 class="card-title">Plush Paper Napkins</h3>
                                 <p class="card-text">Thick and absorbent, ideal for dining and special occasions.</p>
@@ -628,13 +326,11 @@
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-                        <div class="card product-card"><img
-                                src="https://placehold.co/600x400/f8d7da/333333?text=Kitchen+Towels"
-                                class="card-img-top" alt="RoseGold Absorbent Kitchen Towels">
+                        <div class="card product-card">
+                            <img src="https://placehold.co/600x400/f8d7da/333333?text=Kitchen+Towels" class="card-img-top" alt="RoseGold Absorbent Kitchen Towels">
                             <div class="card-body p-4">
                                 <h3 class="card-title">Absorbent Kitchen Towels</h3>
-                                <p class="card-text">Strong and highly absorbent rolls make cleaning up spills
-                                    effortless.</p>
+                                <p class="card-text">Strong and highly absorbent rolls make cleaning up spills effortless.</p>
                             </div>
                         </div>
                     </div>
@@ -646,22 +342,18 @@
             <div class="container">
                 <h2 class="section-title" data-aos="fade-up">Contact Us</h2>
                 <p class="lead text-center mx-auto" style="max-width: 800px;" data-aos="fade-up" data-aos-delay="100">
-                    For bulk orders, partnerships, or any inquiries, please fill out the form below. We look forward to
-                    connecting with you!</p>
+                    For bulk orders, partnerships, or any inquiries, please fill out the form below. We look forward to connecting with you!
+                </p>
                 <div class="row justify-content-center mt-5">
                     <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
                         <form>
                             <div class="row">
-                                <div class="col-md-6 mb-3"><input type="text" class="form-control"
-                                        placeholder="Your Name" required></div>
-                                <div class="col-md-6 mb-3"><input type="email" class="form-control"
-                                        placeholder="Your Email" required></div>
+                                <div class="col-md-6 mb-3"><input type="text" class="form-control" placeholder="Your Name" required></div>
+                                <div class="col-md-6 mb-3"><input type="email" class="form-control" placeholder="Your Email" required></div>
                             </div>
                             <div class="mb-3"><input type="text" class="form-control" placeholder="Subject"></div>
-                            <div class="mb-3"><textarea class="form-control" rows="5" placeholder="Your Message"
-                                    required></textarea></div>
-                            <div class="text-center"><button type="submit" class="btn btn-primary">Send Message</button>
-                            </div>
+                            <div class="mb-3"><textarea class="form-control" rows="5" placeholder="Your Message" required></textarea></div>
+                            <div class="text-center"><button type="submit" class="btn btn-primary">Send Message</button></div>
                         </form>
                     </div>
                 </div>
@@ -672,21 +364,19 @@
     <footer class="pt-5 pb-4">
         <div class="container text-center text-md-start">
             <div class="row">
-                <div class="col-md-4 col-lg-4 mx-auto mt-3"><a href="#home" class="footer-brand d-inline-block"><img
-                            src="rosegold-logo.jpg" alt="RoseGold Logo Footer"></a>
-                    <p class="mt-3">Providing premium, elegant, and sustainable tissue products for a touch of everyday
-                        luxury.</p>
+                <div class="col-md-4 col-lg-4 mx-auto mt-3">
+                    <a href="#home" class="footer-brand d-inline-block"><img src="rosegold-logo.jpg" alt="RoseGold Logo Footer"></a>
+                    <p class="mt-3">Providing premium, elegant, and sustainable tissue products for a touch of everyday luxury.</p>
                 </div>
                 <div class="col-md-2 col-lg-2 mx-auto mt-3">
-                    <h5 class="text-uppercase mb-4 fw-bold text-white">Quick Links</h5>
+                    <h5 class="text-uppercase mb-4 fw-bold">Quick Links</h5>
                     <ul class="list-unstyled">
-                        <li><a href="#home" class="text-white text-decoration-none">Home</a></li>
-                        <li><a href="#about" class="text-white text-decoration-none">About Us</a></li>
-                        <li><a href="#products" class="text-white text-decoration-none">Products</a></li>
-                        <li><a href="#contact" class="text-white text-decoration-none">Contact</a></li>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
-
                 <div class="col-md-4 col-lg-3 mx-auto mt-3">
                     <h5 class="text-uppercase mb-4 fw-bold">Contact Info</h5>
                     <p><i class="bi bi-geo-alt-fill me-3"></i>123 Luxury Lane, New Delhi, India</p>
@@ -700,18 +390,18 @@
                     <p>&copy; 2025 rosegold. All Rights Reserved.</p>
                 </div>
                 <div class="col-md-5 col-lg-4">
-                    <div class="text-center text-md-end social-icons"><a href="#" class="text-white" me><i
-                                class="bi bi-facebook me-2"></i></a><a href="#" class="text-white"><i
-                                class="bi bi-instagram me-2"></i></a><a href="#" class="text-white"><i
-                                class="bi bi-twitter-x me-2"></i></a><a href="#" class="text-white"><i
-                                class="bi bi-linkedin"></i></a></div>
+                    <div class="text-center text-md-end">
+                        <a href="#" class="text-white text-decoration-none me-3"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-white text-decoration-none me-3"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="text-white text-decoration-none me-3"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" class="text-white text-decoration-none"><i class="bi bi-linkedin"></i></a>
+                    </div>
                 </div>
             </div>
         </div>
     </footer>
 
-    <a href="#home" id="backToTopBtn" class="d-flex align-items-center justify-content-center"><i
-            class="bi bi-arrow-up"></i></a>
+    <a href="#home" id="backToTopBtn" class="d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up"></i></a>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -750,5 +440,4 @@
     </script>
 
 </body>
-
 </html>
